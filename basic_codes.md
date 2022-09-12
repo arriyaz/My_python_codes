@@ -54,12 +54,6 @@ durations_df = pd.DataFrame(movie_dict)
 # Print the DataFrame
 durations_df
 ```
-## Subset a dataframe based on specific value in a specific column
-There are many ways to subset a DataFrame. One way that you have been taught is to use **square brackets**, passing in a condition. For example, if we wanted to subset a `music_df` DataFrame for rows where the column `genre` was `"metal"`, we could use the following:
-
-```python
-music_df[music_df["genre"] == "metal"]
-```
 
 ## Subset a dataframe to keep only specific columns
 There are multiple ways to subset a DataFrame for specific columns. If we wanted to subset the music_df DataFrame described above for only album_title, artist, and album_length, we could pass in a list of the columns we want inside the square brackets, as shown below:
@@ -67,3 +61,16 @@ There are multiple ways to subset a DataFrame for specific columns. If we wanted
 ```python
 music_df[['album_title', 'artist', 'album_length']]
 ```
+## Subset a dataframe based on specific value in a specific column
+There are many ways to subset a DataFrame. One way that you have been taught is to use **square brackets**, passing in a condition. For example, if we wanted to subset a `music_df` DataFrame for rows where the column `genre` was `"metal"`, we could use the following:
+
+```python
+music_df[music_df["genre"] == "metal"]
+```
+## Subset a dataframe based on certain condition (less than, grater than etc) in a specific column
+We can specify a condition using square brackets in much the same way as we subset the DataFrame for music earlier. Here is another such example on the music_df DataFrame, filtering for album lengths greater than 120 minutes.
+
+```python
+music_df[music_df['album_length'] > 120]
+```
+
